@@ -3,7 +3,8 @@
 #include<cstdio>
 #include<cstdlib>
 using namespace std;
-
+// 不包含负数的高精度加法
+// High-precision addition without negative numbers
 string a, b;
 int a_n[1000];
 int b_n[1000];
