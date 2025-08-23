@@ -7,8 +7,8 @@ int main() {
 	long c = 30; //4byte
 	long long d = 40; //8byte
 
-	float e = 3.14f; //4byte(小数点后6~7位)
-	double f = 3.14159; //8byte（小数点后15~16位）
+	float e = 3.14f; //4byte
+	double f = 3.14159; //8byte
 
 	char g = 'A'; //1byte
 
