@@ -1,11 +1,11 @@
 #include <iostream>
 using namespace std;
 string a, b;
-int a_n[1000];
-int b_n[1000];
+int a_n[1005];
+int b_n[1005];
 int c[1005];
-// 不包含负数的高精度减法
-// High-precision subtraction without negative numbers
+// 高精度减法
+// High-precision subtraction
 int main(){
     cin >> a >> b;
     int la = a.length();
@@ -20,6 +20,11 @@ int main(){
     3. 如果两个字符不同，则ASCII值较小的字符所在的字符串被认为更小。
     4. 如果一直比较到某个字符串结束，那么较短的字符串被认为更小。
     */
+    // 清零数组
+    for (int i = 0; i < 1005; ++i) {
+        a_n[i] = b_n[i] = c[i] = 0;
+    }
+
     for (int i = 0;i < la; i++){
         a_n[la - i] = a[i] - '0';
     }
@@ -30,9 +35,28 @@ int main(){
     }
     
     int lc = max(la, lb);
-    for (int i = lc;i >= 0; i==)
-    {
+    int borrow = 0;
 
+    for (int i = lc;i >= 0; i--)
+    {
+        int current = a_n[i] - b_n[i] - borrow;
+        if (current < 0 ){
+            current += 10;
+            borrow = 1;
+        }else {
+            borrow = 0;
+        }
+        c[i] = current;
     }
 
+    // 处理结果前导零
+    while (lc > 1 && c[lc] == 0) {
+        lc--;
+    }
+
+    // 输出结果
+    for (int i = lc; i >= 1; i--) {
+        cout << c[i];
+    }
+    cout << endl;
 }
