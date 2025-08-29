@@ -6,14 +6,19 @@ using namespace std;
 // 不包含负数的高精度加法
 // High-precision addition without negative numbers
 string a, b;
-int a_n[1000];
-int b_n[1000];
+int a_n[1005];
+int b_n[1005];
 int c[1005];
 
 int main() {
 	cin >> a >> b;
 	int la = a.length();
 	int lb = b.length();
+	
+	// 清零数组
+    for (int i = 0; i < 1005; ++i) {
+        a_n[i] = b_n[i] = c[i] = 0;
+    }
 
 	for (int i = 0;i < la;i++) {
 		a_n[la - i] = a[i] - '0';
