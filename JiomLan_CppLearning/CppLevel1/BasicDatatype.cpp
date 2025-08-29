@@ -2,7 +2,7 @@
 using namespace std;
 
 int main() {
-	short a = 10; //2byte [(2^15),(2^15)-1]
+	short a = 10; //2byte [-(2^15),(2^15)-1] 0000 0000 0000 0000
 	int b = 20; //4byte 
 	long c = 30; //4byte
 	long long d = 40; //8byte
