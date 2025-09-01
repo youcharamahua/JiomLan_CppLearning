@@ -20,6 +20,8 @@ Basic C++ Algorithms
 ### The second level of learning
 
 High-precision algorithm
+* High-precision addition without negative numbers
+* High-precision subtraction
 
 Dynamic programming algorithm
 
