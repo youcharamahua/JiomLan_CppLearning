@@ -27,4 +27,4 @@ Dynamic programming algorithm
 
 Search algorithm
 * Depth-First Search (DFS)
-* Breadth-First Search(BFS)
+* Breadth-First Search (BFS)
