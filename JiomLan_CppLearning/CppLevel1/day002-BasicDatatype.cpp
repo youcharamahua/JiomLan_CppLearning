@@ -15,6 +15,5 @@ int main() {
 	bool h = true; //1byte (true(1) or false(0))
 
 	cout << "Hello, World!" << endl;
-	system("pause");
 	return 0;
 }

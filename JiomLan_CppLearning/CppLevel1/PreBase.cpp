@@ -1,16 +1,9 @@
 #include <iostream> 
-//input output 
+// 所谓iostream 就是 input output stream 
+// 你问我这个双斜线是什么？这个是注释符号！注释符号后面的内容机器不会编译
 using namespace std;
 
 int main(){
-    
-
-
-
-
-
-
-
-
+    cout << "Hello World!";
     return 0;
 }
