@@ -33,20 +33,7 @@ struct DLList{
 	int data;
 	DLList *prev; //指向前一个节点的指针 
 	DLList *next; //指向后一个节点的指针 
-	
-	// 于创建新节点时初始化
-    Node(int val) {
-        data = val;      // 设置数据
-        prev = nullptr;  // 前指针设为空
-        next = nullptr;  // 后指针设为空
-    }
-    /* 构造函数，Node(int val) : data(val), prev(nullptr), next(nullptr) {}
-	参数说明：(: 冒号表示后面是初始化列表)
-     - val: 要存储的编号
-     - prev: 初始化为nullptr（空指针），表示还没有前驱节点
-     - next: 初始化为nullptr（空指针），表示还没有后继节点
-     空的大括号表示函数体是空的，没有其他操作需要执行
-    */ 
+    DLList(int val) : data(val), prev(NULL), next(NULL){}
 };
 
 int n,m;
@@ -97,7 +84,7 @@ int main(){
         }
         
         // 当前节点就是要出圈的人
-        Node *toDelete = current;  // 保存要删除的节点的指针
+        DLList *toDelete = current;  // 保存要删除的节点的指针
         
         // 输出出圈人的编号
         cout << toDelete->data << " ";
