@@ -4,6 +4,11 @@
 using namespace std;
 
 int main(){
+    // io speed up
+    const char endl = '\n';
+    std::ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    
     cout << "Hello World!";
     return 0;
 }
