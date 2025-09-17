@@ -24,11 +24,13 @@ void Eratosthenes(int n){
 	}
 }
 
+int n;
 int main(){
 	const char endl = '\n';
 	std::ios::sync_with_stdio(0);
 	cin.tie(0);
 	
+	cin>>n;
 	
 	
 	
