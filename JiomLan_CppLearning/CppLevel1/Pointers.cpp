@@ -17,5 +17,6 @@ int main(){
     int *ptr = NULL;
     cout << "Value of ptr: " << ptr << endl;
 
+	delete intpoint,ptr;
     return 0;
 }
