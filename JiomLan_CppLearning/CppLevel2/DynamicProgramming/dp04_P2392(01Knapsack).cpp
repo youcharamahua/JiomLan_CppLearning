@@ -1,5 +1,34 @@
 #include<bits/stdc++.h>
 using namespace std;
+int a[5],i,j,k,sum,t,homework[21];
+int dp[25][1500];
+int main(){
+    for(i=1;i<=4;i++)
+        cin >> a[i]; 
+    for(i=1;i<=4;i++){
+    	sum = 0;
+    	memset(dp, 0, sizeof(dp));
+    	for(j=1;j<=a[i];j++){
+    		cin >> homework[j];
+			sum += homework[j];
+		}
+		for(j=1;j<=a[i];j++){
+			for(k=1;k<=sum/2;k++){
+				dp[j][k] = dp[j-1][k];
+				if(k >= homework[j]){
+					dp[j][k] = max(dp[j][k],dp[j-1][k-homework[j]]+homework[j]);
+				}
+			}			
+		}
+		t += sum - dp[a[i]][sum/2];
+    }
+    cout<<t;
+    return 0;
+}
+
+/* 1D state
+#include<bits/stdc++.h>
+using namespace std;
 int a[5],i,j,k,sum,t,homework[21],dp[2501];
 int main(){
     for(i=1;i<=4;i++)
@@ -23,3 +52,13 @@ int main(){
     cout<<t;
     return 0;
 }
+*/ 
+
+
+
+
+
+
+
+
+
